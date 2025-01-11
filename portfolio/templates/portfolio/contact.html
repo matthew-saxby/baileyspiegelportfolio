@@ -1,0 +1,32 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+<div class="contact-container">
+    <h1>Contact Me</h1>
+    <p>Fill out the form below for inquiries:</p>
+
+    {% if success %}
+        <p class="success-message">Your message has been sent successfully. Thank you!</p>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.first_name.label_tag }}<br>
+            {{ form.first_name }}
+        </div>
+        <div class="form-group">
+            {{ form.last_name.label_tag }}<br>
+            {{ form.last_name }}
+        </div>
+        <div class="form-group">
+            {{ form.email.label_tag }}<br>
+            {{ form.email }}
+        </div>
+        <div class="form-group">
+            {{ form.message.label_tag }}<br>
+            {{ form.message }}
+        </div>
+        <button type="submit">Send</button>
+    </form>
+</div>
+{% endblock %}

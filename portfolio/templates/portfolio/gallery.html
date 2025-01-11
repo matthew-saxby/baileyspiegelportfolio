@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bailey Spiegel</title>
+    <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1500,
+                easing: 'ease-out-back',
+                once: false,
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="site-title">Bailey Spiegel</h1>
+        <nav>
+            <ul>
+                <li><a href="/">About Me</a></li>
+                <li><a href="/gallery/">My Artwork</a></li>
+                <li><a href="/contact/">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="gallery-container">
+            <div class="gallery-dynamic">
+                <!-- Add Gallery Items -->
+                
+                <div class="gallery-item" data-aos="fade-down" data-aos-delay="100">
+                    <img src="{% static 'portfolio/images/Untitled_Artwork 14.jpg' %}" alt="Hookville: Riddles to Master">
+                    <p class="gallery-title">Hookville: Riddles to Master</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="{% static 'portfolio/images/FullSizeRender-7.jpeg' %}" alt="Cradle of the Cosmos">
+                    <p class="gallery-title">Cradle of the Cosmos</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-left" data-aos-delay="200">
+                    <img src="{% static 'portfolio/images/img052.jpg' %}" alt="Cosmic Vision">
+                    <p class="gallery-title">Cosmic Vision</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="{% static 'portfolio/images/Spiegel.jpg' %}" alt="Tree of Life">
+                    <p class="gallery-title">Tree of Life</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-down">
+                    <img src="{% static 'portfolio/images/img047.jpg' %}" alt="Sacred Geometry">
+                    <p class="gallery-title">Sacred Geometry</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-right">
+                    <img src="{% static 'portfolio/images/img051.jpg' %}" alt="Hands and Snake">
+                    <p class="gallery-title">Hands and Snake</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-right">
+                    <img src="{% static 'portfolio/images/self portrait.jpg' %}" alt="Self Portrait">
+                    <p class="gallery-title">Self Portrait</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-left">
+                    <img src="{% static 'portfolio/images/City Illustration this one.jpg' %}" alt="Cityscape">
+                    <p class="gallery-title">Cityscape</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="{% static 'portfolio/images/FullSizeRender-1 2.jpeg' %}" alt="Phoenix">
+                    <p class="gallery-title">Phoenix</p>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="{% static 'portfolio/images/FullSizeRender-5.jpeg' %}" alt="babel">
+                    <p class="gallery-title">babel</p>
+                </div>
+       
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Bailey Spiegel. All rights reserved.</p>
+    </footer>
+</body>
+</html>

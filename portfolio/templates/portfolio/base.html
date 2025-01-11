@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bailey Spiegel</title>
+    <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/your-font-kit-id.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="site-title">Bailey Spiegel</h1>
+        <nav>
+            <ul>
+                <li><a href="/">About Me</a></li>
+                <li><a href="/gallery/">My Artwork</a></li>
+                <li><a href="/contact/">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Bailey Spiegel. All rights reserved.</p>
+    </footer>
+</body>
+</html>
