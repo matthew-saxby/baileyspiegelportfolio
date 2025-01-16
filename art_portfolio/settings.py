@@ -8,7 +8,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'fallback-default-key')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['matthewsaxby.pythonanywhere.com']
+ALLOWED_HOSTS = ['matthewsaxby.pythonanywhere.com','127.0.0.1','localhost']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -24,7 +24,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',  # Ensure this is included
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -72,12 +72,38 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = []  # Removed if the directory doesn't exist
+STATICFILES_DIRS = [
+    #BASE_DIR / "static",
+]  # Removed if the directory doesn't exist
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Email Configuration
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_SSL_CONTEXT = ssl._create_unverified_context()
+EMAIL_HOST_USER = 'apikey'  # This is literally the word 'apikey'
+EMAIL_HOST_PASSWORD = os.getenv('SENDGRID_API_KEY', 'fallback-api-key')  # Use an environment variable
+  # Replace with your actual SendGrid API key
+DEFAULT_FROM_EMAIL = 'no-reply@yourdomain.com'  # Replace with a valid "from" email
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR / 'error.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
