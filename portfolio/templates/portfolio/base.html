@@ -4,13 +4,11 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bailey Spiegel</title>
+    <title>{% block title %}Bailey Spiegel{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
-   
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/your-font-kit-id.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
@@ -25,11 +23,13 @@
 </head>
 <body>
     <header>
-        <h1 class="site-title">Bailey Spiegel</h1>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <h1 class="site-title">
+                <a href="/">Bailey Spiegel</a>
+            </h1>
+            <ul class="nav-links">
                 <li><a href="/">About Me</a></li>
-                <li><a href="/gallery/">My Artwork</a></li>
+                <li><a href="/gallery/">Gallery</a></li>
                 <li><a href="/contact/">Contact Me</a></li>
             </ul>
         </nav>

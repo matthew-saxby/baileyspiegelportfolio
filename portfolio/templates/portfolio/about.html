@@ -1,58 +1,73 @@
-{% extends 'portfolio/base.html' %}
-{% load static %}
-{% block content %}
-<div class="about-container">
-    <!-- Portfolio Picture Section -->
-    <div class="about-image" data-aos="fade-right">
-        <img src="{% static 'portfolio/images/self portrait.jpg' %}" alt="Self Portrait">
-        <div class="instagram-link">
-            <a href="https://www.instagram.com/yourusername/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="Instagram Icon">
-                baileyspiegel
-            </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bailey Spiegel</title>
+    <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1 class="site-title">
+            <a href="/" class="logo-link">Bailey Spiegel</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="/">My Artwork</a></li> <!-- "My Artwork" is now the homepage -->
+                <li><a href="/about/">About Me</a></li>
+                <li><a href="/contact/">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="about-container">
+            <h2>My Artistic Statement</h2> <!-- Added header for artistic statement -->
+            <div class="about-image">
+                <img src="{% static 'portfolio/images/self portrait.jpg' %}" alt="Self Portrait">
+            </div>
+            <div class="about-text">
+                <p>
+                    In my life, I’ve come to believe that the spiritual world is just as real as the physical, 
+                    and very likely even more complex and vast. It is my intention to create artwork that challenges materialist 
+                    paradigms and sparks conversations about the spiritual through the presentation of questions: What is the nature 
+                    and structure of the spiritual world? How do we interact with it? What benevolence or malevolence might it hold? 
+                    What is the nature of the relationship between the material and non-material?
+                </p>
+                <p>
+                    Conceptually, my work has been inspired by creation myths and cosmological maps of many different ancient cultures 
+                    (such as the ancient Maya, Norse, Israelites, Chinese, and Egyptians) which try to make sense of reality and where we 
+                    belong in it. However, my work is open to interpretation, which reflects the inherent mystery of the subject. 
+                    Worldbuilding has also been a prominent theme in my practice as I’ve found creating my own world to be useful in 
+                    better understanding this one. For this reason, The Chronicles of Narnia by C.S. Lewis has also played an influential 
+                    role in my art.
+                </p>
+                <p>
+                    The fantastical nature of many of my illustrations conveys a sense of deep longing for all the good and beautiful things 
+                    these realms hold, while the unsettling, sometimes sinister subject matter stems from an underlying sense of the evil also 
+                    present within both the physical and spiritual worlds. I’m drawn to the most basic elements of nature as the subject matter 
+                    for my work (e.g., sun, moon, stars, flora, fauna, the human form, etc.) as these forms tend to be most free of distracting 
+                    connotations or associations and instead draw the viewer's attention to the earth and physicality itself. The compositions are 
+                    collage-like and symmetrical, often with many niches, referencing religious iconography.
+                </p>
+                <p>
+                    My work is multidisciplinary, including acrylic, oil, watercolor, marker/pen, ceramic, linocut, and mixed media. I’m enamored 
+                    by materials that are highly sensual or tactile, and my work is often stylistically graphic with clear and distinct elements. 
+                    Though my compositions could be described as diagrammatic, they tend to be less literal than a true cosmological map and more 
+                    emotional and intuitive. I usually start with a very basic central idea and compositional structure then instinctually integrate 
+                    or subtract elements as they contribute to or detract from the strength of the piece. The flatness of my work lends itself to be 
+                    better understood as an illustration full of symbolic meaning rather than a scene to be taken literally.
+                </p>
+                <p>
+                    I’ve often found it difficult to orient myself metaphysically within this intersection of the spiritual and physical we find 
+                    ourselves in. It is my hope that the work I produce would serve as an atlas of sorts or that it would prompt viewers to ponder 
+                    their own potential interactions with the spiritual.
+                </p>
+            </div>
         </div>
-    </div>
-    <!-- Description Section -->
-    <div class="about-text" data-aos="fade-left">
-        <p>
-            In my life, I’ve come to believe that the spiritual world is just as real as the physical, 
-            and very likely even more complex and vast. It is my intention to create artwork that challenges materialist 
-            paradigms and sparks conversations about the spiritual through the presentation of questions: What is the nature 
-            and structure of the spiritual world? How do we interact with it? What benevolence or malevolence might it hold? 
-            What is the nature of the relationship between the material and non-material?
-        </p>
-        <p>
-            Conceptually, my work has been inspired by creation myths and cosmological maps of many different ancient cultures 
-            (such as the ancient Maya, Norse, Israelites, Chinese, and Egyptians) which try to make sense of reality and where we 
-            belong in it. However, my work is open to interpretation, which reflects the inherent mystery of the subject. 
-            Worldbuilding has also been a prominent theme in my practice as I’ve found creating my own world to be useful in 
-            better understanding this one. For this reason, The Chronicles of Narnia by C.S. Lewis has also played an influential 
-            role in my art.
-        </p>
-    </div>
-    <!-- Second Section: Full-Width Text -->
-    <div class="full-width">
-        <p>
-            The fantastical nature of many of my illustrations conveys a sense of deep longing for all the good and beautiful things 
-            these realms hold, while the unsettling, sometimes sinister subject matter stems from an underlying sense of the evil also 
-            present within both the physical and spiritual worlds. I’m drawn to the most basic elements of nature as the subject matter 
-            for my work (e.g., sun, moon, stars, flora, fauna, the human form, etc.) as these forms tend to be most free of distracting 
-            connotations or associations and instead draw the viewer's attention to the earth and physicality itself. The compositions are 
-            collage-like and symmetrical, often with many niches, referencing religious iconography.
-        </p>
-        <p>
-            My work is multidisciplinary, including acrylic, oil, watercolor, marker/pen, ceramic, linocut, and mixed media. I’m enamored 
-            by materials that are highly sensual or tactile, and my work is often stylistically graphic with clear and distinct elements. 
-            Though my compositions could be described as diagrammatic, they tend to be less literal than a true cosmological map and more 
-            emotional and intuitive. I usually start with a very basic central idea and compositional structure then instinctually integrate 
-            or subtract elements as they contribute to or detract from the strength of the piece. The flatness of my work lends itself to be 
-            better understood as an illustration full of symbolic meaning rather than a scene to be taken literally.
-        </p>
-        <p>
-            I’ve often found it difficult to orient myself metaphysically within this intersection of the spiritual and physical we find 
-            ourselves in. It is my hope that the work I produce would serve as an atlas of sorts or that it would prompt viewers to ponder 
-            their own potential interactions with the spiritual.
-        </p>
-    </div>
-</div>
-{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Bailey Spiegel. All rights reserved.</p>
+    </footer>
+</body>
+</html>

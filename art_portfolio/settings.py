@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'fallback-default-key')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['matthewsaxby.pythonanywhere.com','127.0.0.1','localhost']
 
@@ -73,9 +73,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    #BASE_DIR / "static",
+    BASE_DIR / "static",
 ]  # Removed if the directory doesn't exist
-STATIC_ROOT = BASE_DIR / "staticfiles"
+#STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
