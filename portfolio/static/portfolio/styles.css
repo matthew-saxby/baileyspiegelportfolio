@@ -5,7 +5,7 @@ html, body {
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
-    font-family: "Freight Display Pro", serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
     color: #333333;
 }
@@ -116,10 +116,10 @@ footer {
 }
 
 .gallery-title{
-    font-family: Dancing Script;
+    font-family: "Cinzel Decorative", serif;
     font-size: 2.5rem;
     font-weight: bold;
-    color: #321970a2; /* Adjust as needed */
+    color: #000000e4; /* Adjust as needed */
     text-align: center;
 }
 
@@ -203,6 +203,10 @@ body {
     max-width: 1200px;
 }
 
+.about-container h1{
+    text-align: center;
+}
+
 /* About Image Section */
 .about-image {
     float: left; /* Align image to the left */
@@ -253,6 +257,7 @@ body {
     line-height: 1.8;
     color: #333333; /* Dark gray text */
 }
+
 
 /* Full-Width Text Section */
 .full-width {
@@ -312,7 +317,7 @@ body {
     margin-bottom: 1rem;
     font-size: 2rem;
     color: #2a2a2a; /* Dark gray */
-    font-family: "Playfair Display", serif; /* Elegant font for header */
+    font-family: "Cinzel Decorative", serif; /* Elegant font for header */
 }
 
 /* Instruction Text */
