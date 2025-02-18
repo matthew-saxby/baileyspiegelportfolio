@@ -1,25 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bailey Spiegel</title>
-    <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
-</head>
-<body>
-    <header>
-        <h1 class="site-title">
-            <a href="/" class="logo-link">Bailey Spiegel</a>
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="/">My Artwork</a></li> <!-- "My Artwork" is now the homepage -->
-                <li><a href="/about/">About Me</a></li>
-                <li><a href="/contact/">Contact Me</a></li>
-            </ul>
-        </nav>
-    </header>
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}About Me - Bailey Spiegel{% endblock %}
+
+{% block content %}
     <main>
         <div class="about-container">
             <h2>My Artistic Statement</h2> <!-- Added header for artistic statement -->
@@ -66,8 +50,4 @@
             </div>
         </div>
     </main>
-    <footer>
-        <p>&copy; 2025 Bailey Spiegel. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+    {% endblock %}

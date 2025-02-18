@@ -19,38 +19,53 @@ header {
     background-color: #2a2a2a;
     padding: 1.5rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row; /* Change to row */
+    justify-content: space-between; /* Spread title and nav */
+    align-items: center; /* Align items vertically */
     position: sticky;
     top: 0;
     z-index: 10;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
-header .site-title {
-    font-size: 2.5rem;
-    color: #d1bfa7;
+.site-title {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 2.75rem;
+    color: #ffffff;
     font-weight: bold;
     margin: 0;
 }
+.site-title a {
+    text-decoration: none;
+    color: inherit;
+}
 
-header nav ul {
+/* Navigation */
+nav {
+    margin-left: auto; /* Pushes nav to the right */
+}
+
+.nav-links {
     list-style: none;
     padding: 0;
-    margin: 1rem 0 0;
+    margin: 0;
     display: flex;
     gap: 1.5rem;
 }
 
-header nav ul li a {
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li a {
     text-decoration: none;
     color: #eaeaea;
+    font-family: "Cinzel Decorative", serif;
     font-weight: lighter;
     transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
+.nav-links li a:hover {
     color: #d1bfa7;
 }
 
@@ -63,13 +78,33 @@ footer {
     color: #bfbfbf;
 }
 
+.footer-contact {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-style: bold;
+}
+
+.footer-contact a {
+    color: #d1bfa7;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+    display: inline-block;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+    color: #bfa57a; /* Slightly lighter shade on hover */
+}
+
+
 /* Masonry Layout for Gallery */
 .gallery-container {
-    margin: 2rem auto;
-    padding: 3rem;
+    margin: 1.5rem auto;
+    padding: 2rem;
     max-width: 1100px;
     column-count: 3; /* Number of columns in the masonry layout */
-    column-gap: 1.75rem; /* Space between columns */
+    column-gap: 1.5rem; /* Space between columns */
 }
 
 .gallery-item {
@@ -78,6 +113,14 @@ footer {
     position: relative;
     break-inside: avoid; /* Prevents items from breaking between columns */
     transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-title{
+    font-family: Dancing Script;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #321970a2; /* Adjust as needed */
+    text-align: center;
 }
 
 /* Image Styling */

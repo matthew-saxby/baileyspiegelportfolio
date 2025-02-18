@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Bailey Spiegel{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}?v=2">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
@@ -23,14 +24,14 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <h1 class="site-title">
-                <a href="/">Bailey Spiegel</a>
-            </h1>
+        <h1 class="site-title">
+            <a href="/">Bailey Spiegel</a>
+        </h1>
+        <nav>
             <ul class="nav-links">
-                <li><a href="/">About Me</a></li>
+                <li><a href="/about/">About Me</a></li>
                 <li><a href="/gallery/">Gallery</a></li>
-                <li><a href="/contact/">Contact Me</a></li>
+                <!--<li><a href="/contact/">Contact Me</a></li>-->
             </ul>
         </nav>
     </header>
@@ -38,7 +39,10 @@
         {% block content %}{% endblock %}
     </main>
     <footer>
+        <div class="footer-contact">
+            <p>Contact me: <a href="mailto:contact@baileyspiegel.com">baileyspiegeart@gmail.com</a></p>
+        </div>
         <p>&copy; 2025 Bailey Spiegel. All rights reserved.</p>
     </footer>
 </body>
-</html>
+</html
